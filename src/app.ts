@@ -33,8 +33,8 @@ const swaggerSpec = swaggerJSDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Use routes
-app.use('/auth', authRoutes);
-app.use('/external-api', externalApiRoutes);
+app.use('/auth/login', authRoutes);
+app.use('/external-api/send', externalApiRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
